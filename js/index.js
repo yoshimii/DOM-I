@@ -42,4 +42,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let mainImg = document.querySelector("#cta-img");
-mainImg.setAttribute('src')
+mainImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let ctaButton = document.querySelector("button");
+ctaButton.textContent = "Get Started";
+
+let nav = document.getElementByCLassName('a');
+
+let topParagraphsH = document.querySelector(".text-content h4");
+topParagraphsH.textContent = "Features";
