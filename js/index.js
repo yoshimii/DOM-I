@@ -45,9 +45,34 @@ let mainImg = document.querySelector("#cta-img");
 mainImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let ctaButton = document.querySelector("button");
-ctaButton.textContent = "Get Started";
+ctaButton.textContent = siteContent["cta"]["button"];
 
-let nav = document.getElementByCLassName('a');
+let ctaText = document.querySelector(".cta .cta-text h1");
+console.log(ctaText);
+ctaText.textContent = siteContent["cta"]["h1"];
 
-let topParagraphsH = document.querySelector(".text-content h4");
-topParagraphsH.textContent = "Features";
+let nav = document.querySelectorAll("nav a");
+for(i = 0; i  < nav.length; i++){
+  nav[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
+}
+
+let topParagraph1 = document.querySelector(".main-content .text-content:nth-child(1) h4");
+topParagraph1.textContent = siteContent['main-content']['features-h4'];
+
+let topParagraph2 = document.querySelector(".main-content .text-content:nth-child(2) h4");
+topParagraph2.textContent = siteContent['main-content']['about-h4'];
+
+let bottomParagraph1 = document.querySelector(".bottom-content .text-content:nth-child(1) h4");
+bottomParagraph1.textContent = siteContent['main-content']['services-h4'];
+
+let bottomParagraph2 = document.querySelector(".bottom-content .text-content:nth-child(2) h4");
+bottomParagraph2.textContent = siteContent['main-content']['product-h4'];
+
+let bottomParagraph3 = document.querySelector(".bottom-content .text-content:nth-child(3) h4");
+bottomParagraph3.textContent = siteContent['main-content']['vision-h4'];
+
+// let ctaText = document.querySelector("h1")
+// ctaText.textContent = siteContent["cta"]["h1"];
+
+// let topParagraphsTitle = document.querySelector(".features-h4");
+// topParagraphsTitle.textContent = "Features";
