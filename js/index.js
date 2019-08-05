@@ -69,18 +69,56 @@ let topParagraph2Text = document.querySelector(".main-content .text-content:nth-
 topParagraph2Text.textContent = siteContent['main-content']['product-content'];
 
 // Bottom paragraphs
+//P1
 let bottomParagraph1 = document.querySelector(".bottom-content .text-content:nth-child(1) h4");
 bottomParagraph1.textContent = siteContent['main-content']['services-h4'];
 
 let bottomParagraph1Text = document.querySelector(".bottom-content .text-content:nth-child(1) p");
-bottomParagraph1Text.textContent = siteContent['main-content']['servvices-content'];
-
+bottomParagraph1Text.textContent = siteContent['main-content']['services-content'];
+// P2
 let bottomParagraph2 = document.querySelector(".bottom-content .text-content:nth-child(2) h4");
 bottomParagraph2.textContent = siteContent['main-content']['product-h4'];
 
-// let bottomParagraph2Text = document.querySelector(".bottom-content .text-content:nth-child(2) p");
-// bottomParagraph2Text.textContent = siteContent['bottom-content']['product-content']
+let bottomParagraph2Text = document.querySelector(".bottom-content .text-content:nth-child(2) p");
+bottomParagraph2Text.textContent = siteContent['main-content']['product-content'];
 
 let bottomParagraph3 = document.querySelector(".bottom-content .text-content:nth-child(3) h4");
 bottomParagraph3.textContent = siteContent['main-content']['vision-h4'];
+
+let bottomParagraph3Text = document.querySelector(".bottom-content .text-content:nth-child(3) p");
+bottomParagraph3Text.textContent = siteContent['main-content']['vision-content'];
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let contact = document.querySelector(".contact h4");
+contact.textContent = siteContent['contact']['contact-h4'];
+
+// let address = document.querySelector(".contact p");
+// address.textContent = siteContent['contact']['address'];
+
+// let phone = document.querySelector(".contact p:nth-child(2)");
+// phone.textContent = siteContent['contact']['phone'];
+
+
+
+let contactInfo = document.querySelector(".contact p");
+let info = siteContent ["contact"];
+
+console.log(info);
+info.shift();
+
+let infoPara = Object.keys(info);
+infoPara.shift();
+for(let i=0; i < contactInfo.length; i++){
+  contactInfo[i].textContent = siteContent['contact'][`${infoPara[i]}`]
+}
+console.log(infoPara);
+
+// let info = Object.keys(siteContent["contact"]);
+// for (i=0; i < info.length; i++) {
+//   contactInfo[i].textContent = siteContent[contact][`${info[i]}`];
+// }
+
+// console.log(info);
 
