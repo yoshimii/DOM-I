@@ -48,7 +48,6 @@ let ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent["cta"]["button"];
 
 let ctaText = document.querySelector(".cta .cta-text h1");
-console.log(ctaText);
 ctaText.textContent = siteContent["cta"]["h1"];
 
 let nav = document.querySelectorAll("nav a");
@@ -94,26 +93,30 @@ midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 let contact = document.querySelector(".contact h4");
 contact.textContent = siteContent['contact']['contact-h4'];
 
-// let address = document.querySelector(".contact p");
-// address.textContent = siteContent['contact']['address'];
-
-// let phone = document.querySelector(".contact p:nth-child(2)");
-// phone.textContent = siteContent['contact']['phone'];
+let address = document.querySelector(".contact p:nth-of-type(1)");
+address.textContent = siteContent['contact']['address'];
 
 
+let phone = document.querySelector(".contact p:nth-of-type(2)");
+phone.textContent = siteContent['contact']['phone'];
 
-let contactInfo = document.querySelector(".contact p");
-let info = siteContent ["contact"];
+let email = document.querySelector(".contact p:nth-of-type(3)");
+email.textContent = siteContent['contact']['email'];
 
-console.log(info);
-info.shift();
+// let break = document.
 
-let infoPara = Object.keys(info);
-infoPara.shift();
-for(let i=0; i < contactInfo.length; i++){
-  contactInfo[i].textContent = siteContent['contact'][`${infoPara[i]}`]
-}
-console.log(infoPara);
+
+// let contactInfo = document.querySelector(".contact p");
+// let info = siteContent ["contact"];
+
+// console.log(info);
+
+// let infoPara = Object.keys(info);
+// infoPara.shift();
+// for(let i=0; i < contactInfo.length; i++){
+//   contactInfo[i].textContent = siteContent['contact'][`${infoPara[i]}`]
+// }
+// console.log(infoPara);
 
 // let info = Object.keys(siteContent["contact"]);
 // for (i=0; i < info.length; i++) {
