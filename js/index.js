@@ -55,24 +55,32 @@ let nav = document.querySelectorAll("nav a");
 for(i = 0; i  < nav.length; i++){
   nav[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
 }
-
+// Top pargraphs
 let topParagraph1 = document.querySelector(".main-content .text-content:nth-child(1) h4");
 topParagraph1.textContent = siteContent['main-content']['features-h4'];
+
+let topParagraph1Text = document.querySelector(".main-content .text-content:nth-child(1) p");
+topParagraph1Text.textContent = siteContent['main-content']['features-content'];
 
 let topParagraph2 = document.querySelector(".main-content .text-content:nth-child(2) h4");
 topParagraph2.textContent = siteContent['main-content']['about-h4'];
 
+let topParagraph2Text = document.querySelector(".main-content .text-content:nth-child(2) p");
+topParagraph2Text.textContent = siteContent['main-content']['product-content'];
+
+// Bottom paragraphs
 let bottomParagraph1 = document.querySelector(".bottom-content .text-content:nth-child(1) h4");
 bottomParagraph1.textContent = siteContent['main-content']['services-h4'];
+
+let bottomParagraph1Text = document.querySelector(".bottom-content .text-content:nth-child(1) p");
+bottomParagraph1Text.textContent = siteContent['main-content']['servvices-content'];
 
 let bottomParagraph2 = document.querySelector(".bottom-content .text-content:nth-child(2) h4");
 bottomParagraph2.textContent = siteContent['main-content']['product-h4'];
 
+// let bottomParagraph2Text = document.querySelector(".bottom-content .text-content:nth-child(2) p");
+// bottomParagraph2Text.textContent = siteContent['bottom-content']['product-content']
+
 let bottomParagraph3 = document.querySelector(".bottom-content .text-content:nth-child(3) h4");
 bottomParagraph3.textContent = siteContent['main-content']['vision-h4'];
 
-// let ctaText = document.querySelector("h1")
-// ctaText.textContent = siteContent["cta"]["h1"];
-
-// let topParagraphsTitle = document.querySelector(".features-h4");
-// topParagraphsTitle.textContent = "Features";
