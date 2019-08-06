@@ -49,11 +49,14 @@ ctaButton.textContent = siteContent["cta"]["button"];
 
 let ctaText = document.querySelector(".cta .cta-text h1");
 ctaText.textContent = siteContent["cta"]["h1"];
-
+// Navigation set a elements in nav
 let nav = document.querySelectorAll("nav a");
 for(i = 0; i  < nav.length; i++){
   nav[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
+  nav[i].style.color = "green";
 }
+
+
 // Top pargraphs
 let topParagraph1 = document.querySelector(".main-content .text-content:nth-child(1) h4");
 topParagraph1.textContent = siteContent['main-content']['features-h4'];
@@ -88,7 +91,7 @@ let bottomParagraph3Text = document.querySelector(".bottom-content .text-content
 bottomParagraph3Text.textContent = siteContent['main-content']['vision-content'];
 
 let midImg = document.getElementById("middle-img");
-midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 let contact = document.querySelector(".contact h4");
 contact.textContent = siteContent['contact']['contact-h4'];
@@ -103,7 +106,10 @@ phone.textContent = siteContent['contact']['phone'];
 let email = document.querySelector(".contact p:nth-of-type(3)");
 email.textContent = siteContent['contact']['email'];
 
-// let break = document.
+// let ctaArray = siteContent.cta.h1.split(' ').join('\n');
+// ctaArray.splice(1,0,"\r\n");
+
+
 
 
 // let contactInfo = document.querySelector(".contact p");
